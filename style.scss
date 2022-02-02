@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Do Hyeon', sans-serif;
+}
+@function vw($target) { 
+    $vw-context: (1280*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+  }
+main{
+    background: url(https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?size=626&ext=jpg&ga=GA1.2.1292351815.1643328000) 0 0 no-repeat;
+    background-size: cover;
+    .wrap{
+        padding: vw(50px);
+        .inner{
+            width: vw(960px);
+            margin: 0 auto;
+            text-align: center;
+            h1{
+                font-weight: 500;
+                letter-spacing: 0.1em;
+            }
+            div{
+                font-size: 32px;
+                color: darkblue;
+            }
+            p{
+                text-align: right;
+            }
+            button{
+                border: none;
+                background: none;
+                border-radius: 10px;
+                display: inline-block;
+                padding: vw(10px);
+                color: #fff;
+                font-weight: 400;
+                &:first-of-type{
+                    background: red;
+                }
+                &:last-of-type{
+                    background: green;
+                }
+            }
+        }
+    }
+}
